@@ -1,0 +1,5 @@
+
+.keydata { display: flex;margin-bottom: 74px; }
+.datatext { display: block;padding-left: 20px; }
+.datatext h3, .datatext p { margin: 4px;color: black; }
+.datatext h3 { padding-top: 7px; }

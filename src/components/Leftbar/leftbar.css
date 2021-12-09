@@ -1,0 +1,10 @@
+.copi p { 
+    writing-mode: vertical-lr;
+    
+}
+.copi  { 
+    height: 280px;
+    transform: rotate(-180deg);
+    padding-left: 10px;
+    position: relative;
+}

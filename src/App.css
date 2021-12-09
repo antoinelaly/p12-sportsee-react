@@ -1,0 +1,30 @@
+.leradar { background-color: #282D30;margin-right: 20px;}
+
+.recharts-layer text { color: #fff;}
+.leradar line { display: none;}
+
+.recharts-polar-angle-axis-tick-value  {
+    transform: translateY(.3rem);
+}
+
+.fontSize { font-size: .8em;line-height: 32px;}
+.theprofile { display: flex; }
+
+.main { padding-left: 109px;padding-top: 25px;}
+.legraf {display: flex;justify-content: space-between;}
+
+.recharts { width: 70%;}
+.rightbar { width: 250px;padding-left: 109px; }
+
+.leradial  { height: 30px;width: 85px; padding: 7px;}
+
+
+.leftbar {display: flex;height: 100%;width: 117px;}
+
+
+.laline h3 { font-weight: 500;color: #fff;opacity: 0.5;font-size: 15px;line-height: 24px;margin:0; }
+.laline .letitre { padding-left: 40px;margin:0;max-width: 140px;padding-bottom: 30px;padding-top: 20px; }
+.laline .lasemaine h3 { padding-left: 14px;letter-spacing: .68rem;padding-top: 10px; }
+.lelayer { display: flex; }
+.lelayer .colonnea { position: relative;z-index: -1; background-color: #FF0001;width: 179px;height: 263px;top: -263px;}
+.lelayer .colonneb { position: relative;z-index: -1; background-color: #e60000;width: 80px;height: 263px;left: 0px;top: -263px; }

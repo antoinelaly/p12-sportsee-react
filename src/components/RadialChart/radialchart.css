@@ -1,0 +1,5 @@
+.labarchart svg {position: relative;transform: rotate(-90deg);padding: 30px; }
+.labarchart h3 { position: relative;top: -260px;padding: 2px 5px; }
+.labarchart h2 { position: relative;top: -210px;margin-left: 130px; }
+.labarchart p { position: relative;top: -230px;margin-left: 122px;width: 60px;text-align: center; }
+

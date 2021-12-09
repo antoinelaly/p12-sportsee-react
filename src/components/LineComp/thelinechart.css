@@ -1,0 +1,7 @@
+.laline .recharts-rectangle.recharts-reference-area-rect { padding-top: 100px;height: 200px;}
+
+.recharts-layer.recharts-reference-area { height: 250px; }
+
+.laline { margin-right: 20px;padding: 5px 0;}
+
+.custom-tooltip-line { background-color: #fff; padding: 0px 10px;z-index: 200; }
