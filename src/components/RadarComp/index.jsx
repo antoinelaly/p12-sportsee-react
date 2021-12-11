@@ -4,7 +4,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, } from 'recharts';
 import { useAxios } from "use-axios-client";
 
 /**
- * @description Get generic uesr 12 performance data using axio api 
+ * Get user 12 performances data using axio api 
  * to render using recharts component the radar map 
  * Convertion to array to merge to array/objects of 3 values 
  * renderPolarAngleAxis is used to adjust the texts position
@@ -42,7 +42,6 @@ function mergeArrayObjects(item,id){
 }
 
 const dataradar = mergeArrayObjects(dddata,rkind);
-console.log("dataradar", dataradar);
 
   return (
     <div>

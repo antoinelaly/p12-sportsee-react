@@ -2,6 +2,13 @@ import React from "react";
 import './main.css'
 import { useAxios } from "use-axios-client";
 
+/**
+ * Get generic user 12 data using axio api 
+ * to render the title with the user first name
+ * @param { Object } ddata
+ * @param { Object } dduser
+ * @param { string } ddufirst
+ */
 
 function Title() {
   const { data, error, loading } = useAxios({
@@ -13,7 +20,7 @@ function Title() {
 
   const ddata = data.data;
   const dduser = ddata.userInfos;
-  const ddufirst= dduser.firstName;
+  const ddufirst = dduser.firstName;
 
   return (
     <div>

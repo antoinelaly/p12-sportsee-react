@@ -3,6 +3,15 @@ import { LineChart, Line, Tooltip } from "recharts";
 import './thelinechart.css'
 import { useAxios } from "use-axios-client";
 
+/**
+ * Get user 12 average-sessions data using axio api 
+ * to render using recharts component, the smooth time line
+ * CustomTooltip is necessary to render only the value
+ * css is used to adjust the supperpositions
+ * @param { Object } ddata
+ * @param { Array } ddsessions
+ */
+
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (

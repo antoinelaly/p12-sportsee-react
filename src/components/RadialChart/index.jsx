@@ -4,7 +4,7 @@ import { useAxios } from "use-axios-client";
 import './radialchart.css'
 
 /**
- * Get generic uesr 12 score data using axio api 
+ * Get generic user 12 score data using axio api 
  * to render using recharts component the radial curve 
  * css is used to rotat the curve
  * @param { Object } ddata

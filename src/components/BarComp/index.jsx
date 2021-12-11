@@ -4,6 +4,15 @@ import './barchart.css'
 import { useAxios } from "use-axios-client";
 import moment from 'moment'; 
 
+/**
+ * Get user 12 activity data using axio api 
+ * to render using recharts component, the vartical bars
+ * CustomTooltip is necessary to render only the values
+ * moment component is necessary to adjust the dates rending
+ * @param { Object } ddata
+ * @param { Array } ddsessions
+ */
+
 const CustomTooltip = ({ active, payload, label }) => {
 
   if (active && payload && payload.length) {
