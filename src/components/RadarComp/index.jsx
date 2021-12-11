@@ -4,7 +4,15 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, } from 'recharts';
 import { useAxios } from "use-axios-client";
 
 /**
- * @description component renderPolarAngleAxis to adjust the y subjects position
+ * @description Get generic uesr 12 performance data using axio api 
+ * to render using recharts component the radar map 
+ * Convertion to array to merge to array/objects of 3 values 
+ * renderPolarAngleAxis is used to adjust the texts position
+ * @param { Object } ddata
+ * @param { Array } dddata
+ * @param { Object } ddatakind
+ * @param { Array } rkind
+ * @param { Array } dataradar
  */
 
 function RadarComp() {
@@ -21,7 +29,7 @@ const ddatakind = ddata?.kind;
 
 // ddatakind {object} to rkind {array} 
 const rkind = Object.keys(ddatakind).map(e => ({kind: e, A: ddatakind[e]}))
- 
+
 function mergeArrayObjects(item,id){
   return dddata.map((item,i) => {
       if(item.id === rkind[i].id){
@@ -34,6 +42,7 @@ function mergeArrayObjects(item,id){
 }
 
 const dataradar = mergeArrayObjects(dddata,rkind);
+console.log("dataradar", dataradar);
 
   return (
     <div>
