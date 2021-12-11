@@ -22,6 +22,14 @@ width: 100px
   color: #fff;
 `
 
+/**
+ * Get generic user 12 data using axio api 
+ * to render the user keyData
+ * @param { Object } ddata
+ * @param { Object } ddkeyData
+ * @param { number } ddkeycalorie, ddkeyprotein, ddkeyglu, ddkeylip, ddkc
+ */
+
 function Rightbar() {
   const { data, error, loading } = useAxios({
     url: "http://localhost:8000/user/12"
