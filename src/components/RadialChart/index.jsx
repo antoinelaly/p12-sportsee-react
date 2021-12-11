@@ -3,6 +3,16 @@ import { RadialBarChart, PolarAngleAxis, RadialBar } from "recharts";
 import { useAxios } from "use-axios-client";
 import './radialchart.css'
 
+/**
+ * Get generic uesr 12 score data using axio api 
+ * to render using recharts component the radial curve 
+ * css is used to rotat the curve
+ * @param { Object } ddata
+ * @param { Number } dddscore
+ * @param { Number } scored
+ * @param { Array } theccurve
+ */
+
 const circleSize = 250;
 
 function RadialChart() {
@@ -16,7 +26,7 @@ function RadialChart() {
   const ddata = data?.data;
   const dddscore = ddata.todayScore;
   const scored = dddscore * 100;
-  let lacourbe = [dddscore];
+  let theccurve = [dddscore];
 
   return (
   <div className="labarchart">
@@ -28,7 +38,7 @@ function RadialChart() {
     innerRadius="80%"
     outerRadius="100%"
     barSize={12}
-    data={lacourbe}
+    data={theccurve}
     startAngle={90}
     endAngle={-270}
     paddingAngle={0}
