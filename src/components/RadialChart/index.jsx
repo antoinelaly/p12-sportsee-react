@@ -9,8 +9,8 @@ import './radialchart.css'
  * css is used to rotat the curve
  * @param { Object } ddata
  * @param { Number } dddscore
- * @param { Number } scored
- * @param { Array } theccurve
+ * @param { Number } props.scored - large number in the center
+ * @param { Array } props.theccurve - to generate the curve
  */
 
 const circleSize = 250;

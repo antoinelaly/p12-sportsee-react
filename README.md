@@ -15,3 +15,4 @@ GitHub implementation : with API, static pages
 
 port : change from localhost:3000 to localhost:8000, for the App tu run on 3000
 User choice : `http://localhost:8000/user/12/performance`
+API github : `https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard`
