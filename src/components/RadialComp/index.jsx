@@ -15,7 +15,7 @@ import './radialchart.css'
 
 const circleSize = 250;
 
-function RadialChart() {
+function RadialComp() {
   const { data, error, loading } = useAxios({
     url: "http://localhost:8000/user/12"
   });
@@ -73,4 +73,4 @@ function RadialChart() {
   );
 }
 
-export default RadialChart;
+export default RadialComp;
