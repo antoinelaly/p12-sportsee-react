@@ -4,15 +4,13 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, } from 'recharts';
 import { useAxios } from "use-axios-client";
 
 /**
- * Get user 12 performances data using axio api 
- * to render using recharts component the radar map 
- * Convertion to array to merge to array/objects of 3 values 
+ * Get data using axio api & render using recharts component
  * renderPolarAngleAxis is used to adjust the texts position
- * @param { Object } ddata
- * @param { Array } dddata
- * @param { Object } ddatakind
- * @param { Array } rkind
- * @param { Array } dataradar
+ * @param { Object } ddata - user 12 performances, data & description
+ * @param { Array } dddata - value & index
+ * @param { Object } ddatakind - index & description
+ * @param { Array } rkind - ddatakind in array to be merge with dddata
+ * @param { Array } props.dataradar - radar map merged data with 3 values 
  */
 
 function RadarComp() {

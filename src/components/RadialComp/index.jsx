@@ -7,8 +7,6 @@ import './radialchart.css'
  * Get generic user 12 score data using axio api 
  * to render using recharts component the radial curve 
  * css is used to rotat the curve
- * @param { Object } ddata
- * @param { Number } dddscore
  * @param { Number } props.scored - large number in the center
  * @param { Array } props.theccurve - to generate the curve
  */
