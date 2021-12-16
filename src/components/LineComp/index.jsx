@@ -30,7 +30,7 @@ function LineComp() {
   if (loading || !data) return "Loading...";
   if (error) return "Error!";
 
-  const ddata = data.data;
+  const ddata = data?.data;
   const ddsessions= ddata.sessions;
 
   return (

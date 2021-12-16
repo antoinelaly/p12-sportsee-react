@@ -22,8 +22,8 @@ function RadarComp() {
   if (error) return "Error!";
 
 const ddata = data?.data;
-const dddata = ddata?.data;
-const ddatakind = ddata?.kind;
+const dddata = ddata.data;
+const ddatakind = ddata.kind;
 
 // ddatakind {object} to rkind {array} 
 const rkind = Object.keys(ddatakind).map(e => ({kind: e, A: ddatakind[e]}))

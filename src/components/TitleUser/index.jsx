@@ -18,7 +18,7 @@ function Title() {
   if (loading || !data) return "Loading...";
   if (error) return "Error!";
 
-  const ddata = data.data;
+  const ddata = data?.data;
   const dduser = ddata.userInfos;
   const ddufirst = dduser.firstName;
 
