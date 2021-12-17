@@ -11,7 +11,6 @@ import moment from 'moment';
  * @param { Object } ddata - user 12 activity 
  * @param { Array } props.ddsessions - the vartical bars
  */
-
 const CustomTooltip = ({ active, payload, label }) => {
 
   if (active && payload && payload.length) {

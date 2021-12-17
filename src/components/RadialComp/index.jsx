@@ -10,7 +10,6 @@ import './radialchart.css'
  * @param { Number } props.scored - large number in the center
  * @param { Array } props.theccurve - to generate the curve
  */
-
 const circleSize = 250;
 
 function RadialComp() {

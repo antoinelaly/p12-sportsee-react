@@ -29,7 +29,6 @@ width: 100px
  * @param { Object } ddkeyData
  * @param { number } ddkeycalorie, ddkeyprotein, ddkeyglu, ddkeylip, ddkc
  */
-
 function Rightbar() {
   const { data, error, loading } = useAxios({
     url: "http://localhost:8000/user/12"

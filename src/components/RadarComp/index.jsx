@@ -12,7 +12,6 @@ import { useAxios } from "use-axios-client";
  * @param { Array } rkind - ddatakind in array to be merge with dddata
  * @param { Array } props.dataradar - radar map merged data with 3 values 
  */
-
 function RadarComp() {
   const { data, error, loading } = useAxios({
     url: "http://localhost:8000/user/12/performance"

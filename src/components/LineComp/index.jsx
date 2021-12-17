@@ -10,7 +10,6 @@ import { useAxios } from "use-axios-client";
  * @param { Object } ddata - user 12 average-sessions
  * @param { Array } props.ddsessions - the smooth time line
  */
-
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
