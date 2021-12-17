@@ -9,7 +9,6 @@ import { useAxios } from "use-axios-client";
  * @param { Object } dduser
  * @param { string } ddufirst
  */
-
 function Title() {
   const { data, error, loading } = useAxios({
     url: "http://localhost:8000/user/12"
