@@ -5,6 +5,7 @@ import carbs from '../../assets/carbs-icon.svg'
 import fat from '../../assets/fat-icon.svg'
 import './rightbar.css'
 import { useAxios } from "use-axios-client";
+import PropTypes from 'prop-types';
 
 const NavPictos = styled.img`
   height: 64px;
@@ -62,6 +63,17 @@ function Rightbar() {
       <div className="copi" >Copiryght, SportSee 2020</div>
     </PictoContainer>
   )
+}
+
+Rightbar.propTypes = {
+  ddkc: PropTypes.number.isRequired,
+  calories: PropTypes.string.isRequired,
+  ddkeyprotein: PropTypes.number.isRequired,
+  protein: PropTypes.string.isRequired,
+  ddkeyglu: PropTypes.number.isRequired,
+  carbs: PropTypes.string.isRequired,
+  ddkeylip: PropTypes.number.isRequired,
+  fat: PropTypes.string.isRequired,
 }
 
 export default Rightbar

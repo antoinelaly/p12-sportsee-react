@@ -2,6 +2,7 @@ import React from "react";
 import { LineChart, Line, Tooltip } from "recharts";
 import './thelinechart.css'
 import { useAxios } from "use-axios-client";
+import PropTypes from 'prop-types';
 
 /**
  * Get data using axio api to render using recharts component
@@ -47,6 +48,10 @@ function LineComp() {
   <div className="lasemaine"><h3>L M M J V S D</h3></div>
   </div>
   );
+}
+
+LineComp.propTypes = {
+  ddsessions: PropTypes.array.isRequired,
 }
 
 export default LineComp

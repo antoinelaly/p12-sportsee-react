@@ -1,7 +1,8 @@
 import React from "react";
 import { RadialBarChart, PolarAngleAxis, RadialBar } from "recharts";
 import { useAxios } from "use-axios-client";
-import './radialchart.css'
+import './radialchart.css';
+import PropTypes from 'prop-types';
 
 /**
  * Get generic user 12 score data using axio api 
@@ -68,6 +69,11 @@ function RadialComp() {
   <h3>Score</h3><h2>{scored}%</h2><p>de votre objectif</p>
 </div>
   );
+}
+
+RadialComp.propTypes = {
+  RadialComp: PropTypes.array.isRequired,
+  scored: PropTypes.number.isRequired,
 }
 
 export default RadialComp;

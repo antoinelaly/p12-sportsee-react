@@ -3,6 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 import './barchart.css'
 import { useAxios } from "use-axios-client";
 import moment from 'moment'; 
+import PropTypes from 'prop-types'
 
 /**
  * Get data using axio api to render using recharts component, 
@@ -62,6 +63,10 @@ function BarComp(){
       </BarChart>
     </div>
   );
+}
+
+BarComp.propTypes = {
+  ddsessions: PropTypes.array.isRequired,
 }
 
 export default BarComp

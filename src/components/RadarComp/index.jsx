@@ -2,6 +2,7 @@ import React from 'react';
 import renderPolarAngleAxis from '../renderPolarAngleAxis';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, } from 'recharts';
 import { useAxios } from "use-axios-client";
+import PropTypes from 'prop-types';
 
 /**
  * Get data using axio api & render using recharts component
@@ -52,6 +53,10 @@ const dataradar = mergeArrayObjects(dddata,rkind);
     </RadarChart>
     </div>
   );
+}
+
+RadarComp.propTypes = {
+  dataradar: PropTypes.array.isRequired,
 }
 
 export default RadarComp

@@ -1,6 +1,7 @@
 import React from "react";
 import './main.css'
 import { useAxios } from "use-axios-client";
+import PropTypes from 'prop-types'
 
 /**
  * Get generic user 12 data using axio api 
@@ -30,6 +31,10 @@ function Title() {
       </div>
     </div>
   );
+}
+
+Title.propTypes = {
+  ddufirst: PropTypes.string.isRequired,
 }
 
 export default Title
