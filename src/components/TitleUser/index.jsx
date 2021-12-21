@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
  * @param { Object } dduser
  * @param { string } ddufirst
  */
-function Title() {
+function TheTitleUser() {
   const { data, error, loading } = useAxios({
     url: "http://localhost:8000/user/12"
   });
@@ -33,8 +33,8 @@ function Title() {
   );
 }
 
-Title.propTypes = {
+TheTitleUser.propTypes = {
   ddufirst: PropTypes.string.isRequired,
 }
 
-export default Title
+export default TheTitleUser

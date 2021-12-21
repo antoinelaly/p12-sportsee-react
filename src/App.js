@@ -30,10 +30,8 @@ function App() {
           </div>
             <div className="rightbar"><Rightbar/></div>
         </div>
-
         </div>
       </div>
-
     </div>
   );
 }
