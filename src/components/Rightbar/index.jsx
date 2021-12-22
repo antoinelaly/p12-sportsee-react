@@ -4,7 +4,7 @@ import protein from '../../assets/protein-icon.svg'
 import carbs from '../../assets/carbs-icon.svg'
 import fat from '../../assets/fat-icon.svg'
 import './rightbar.css'
-import { useAxios } from "use-axios-client";
+import { useFetch } from '../../utils/hooks'
 import PropTypes from 'prop-types';
 
 const NavPictos = styled.img`
@@ -31,11 +31,12 @@ width: 100px
  * @param { number } ddkeycalorie, ddkeyprotein, ddkeyglu, ddkeylip, ddkc
  */
 function Rightbar() {
-  const { data, error, loading } = useAxios({
-    url: "http://localhost:8000/user/12"
-  });
 
-  if (loading || !data) return "Loading...";
+  const { data, isLoading, error } = useFetch( 
+    `http://localhost:8000/user/12`
+  )
+
+  if (isLoading || !data) return "Loading...";
   if (error) return "Error!";
 
   const ddata = data?.data;

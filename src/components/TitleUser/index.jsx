@@ -1,6 +1,6 @@
 import React from "react";
 import './main.css'
-import { useAxios } from "use-axios-client";
+import { useFetch } from '../../utils/hooks'
 import PropTypes from 'prop-types'
 
 /**
@@ -11,11 +11,12 @@ import PropTypes from 'prop-types'
  * @param { string } ddufirst
  */
 function TheTitleUser() {
-  const { data, error, loading } = useAxios({
-    url: "http://localhost:8000/user/12"
-  });
 
-  if (loading || !data) return "Loading...";
+  const { data, isLoading, error } = useFetch( 
+    `http://localhost:8000/user/12`
+  )
+
+  if (isLoading || !data) return "Loading...";
   if (error) return "Error!";
 
   const ddata = data?.data;

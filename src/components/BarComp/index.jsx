@@ -1,9 +1,11 @@
+//import React from 'react';
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 import './barchart.css'
-import { useAxios } from "use-axios-client";
 import moment from 'moment'; 
 import PropTypes from 'prop-types'
+import { useFetch } from '../../utils/hooks'
+
 
 /**
  * Get data using axio api to render using recharts component, 
@@ -30,18 +32,21 @@ const formatXAxis = tickItem => {
 }
 
 function BarComp(){
-  const { data, error, loading } = useAxios({
-    url: "http://localhost:8000/user/12/activity"
-  });
+  
+  const { data, isLoading, error } = useFetch( 
+    `http://localhost:8000/user/12/activity`
+  )
 
-  if (loading || !data) return "Loading...";
+  if (isLoading || !data) return "Loading...";
   if (error) return "Error!";
 
   const ddata = data.data;
   const ddsessions= ddata.sessions;
+ 
 
   return (
     <div className="labarre"><h5>Activité quotidienne</h5>
+    
       <BarChart
         width={835}
         height={320}
@@ -61,6 +66,9 @@ function BarComp(){
         <Bar yAxisId="right" dataKey="kilogram" fill="#282D30" barSize={10} radius={[10, 10, 0, 0]}/>
         <Bar yAxisId="right" dataKey="calories" fill="#E60000" barSize={10} radius={[10, 10, 0, 0]}/>
       </BarChart>
+      <div>
+            
+        </div>
     </div>
   );
 }

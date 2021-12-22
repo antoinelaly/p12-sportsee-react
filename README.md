@@ -8,7 +8,7 @@ This project use extentions : react-dom, styled-components, recharts, use-axios-
 
 ## to be cheked 
 
-RadarChart component : mergeArrayObjects function
+RadarChart component: mergeArrayObjects function
 GitHub implementation : with API, static pages
 
 ## 2. API P9-front-end-dashboard

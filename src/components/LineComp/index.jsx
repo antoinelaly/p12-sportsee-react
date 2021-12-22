@@ -1,7 +1,7 @@
 import React from "react";
 import { LineChart, Line, Tooltip } from "recharts";
 import './thelinechart.css'
-import { useAxios } from "use-axios-client";
+import { useFetch } from '../../utils/hooks'
 import PropTypes from 'prop-types';
 
 /**
@@ -23,11 +23,12 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 function LineComp() {
-  const { data, error, loading } = useAxios({
-    url: "http://localhost:8000/user/12/average-sessions"
-  });
 
-  if (loading || !data) return "Loading...";
+  const { data, isLoading, error } = useFetch( 
+    `http://localhost:8000/user/12/average-sessions`
+  )
+
+  if (isLoading || !data) return "Loading...";
   if (error) return "Error!";
 
   const ddata = data?.data;

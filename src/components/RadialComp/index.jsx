@@ -1,6 +1,6 @@
 import React from "react";
 import { RadialBarChart, PolarAngleAxis, RadialBar } from "recharts";
-import { useAxios } from "use-axios-client";
+import { useFetch } from '../../utils/hooks'
 import './radialchart.css';
 import PropTypes from 'prop-types';
 
@@ -14,11 +14,12 @@ import PropTypes from 'prop-types';
 const circleSize = 250;
 
 function RadialComp() {
-  const { data, error, loading } = useAxios({
-    url: "http://localhost:8000/user/12"
-  });
 
-  if (loading || !data) return "Loading...";
+  const { data, isLoading, error } = useFetch( 
+    `http://localhost:8000/user/12`
+  )
+
+  if (isLoading || !data) return "Loading...";
   if (error) return "Error!";
 
   const ddata = data?.data;

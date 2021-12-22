@@ -1,8 +1,8 @@
 import React from 'react';
 import renderPolarAngleAxis from '../renderPolarAngleAxis';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, } from 'recharts';
+import { useAxios } from "use-axios-client";
 import PropTypes from 'prop-types';
-import { useFetch } from '../../utils/hooks'
 
 /**
  * Get data using axio api & render using recharts component
@@ -14,17 +14,16 @@ import { useFetch } from '../../utils/hooks'
  * @param { Array } props.dataradar - radar map merged data with 3 values 
  */
 function RadarComp() {
+  const { data, error, loading } = useAxios({
+    url: "http://localhost:8000/user/12/performance"
+  });
 
-  const { data, isLoading, error } = useFetch( 
-    `http://localhost:8000/user/12/performance`
-  )
-
-  if (isLoading || !data) return "Loading...";
+  if (loading || !data) return "Loading...";
   if (error) return "Error!";
 
 const ddata = data?.data;
-const dddata = ddata?.data;
-const ddatakind = ddata?.kind;
+const dddata = ddata.data;
+const ddatakind = ddata.kind;
 
 // ddatakind {object} to rkind {array} 
 const rkind = Object.keys(ddatakind).map(e => ({kind: e, A: ddatakind[e]}))
